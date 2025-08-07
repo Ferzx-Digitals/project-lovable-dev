@@ -1,8 +1,27 @@
 {
-  "name": "vite_react_shadcn_ts",
+  "name": "irf-world-ranger-congress-2027",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "Official landing page for the 11th IRF World Ranger Congress 2027 in Puerto Iguazú, Argentina",
+  "keywords": [
+    "rangers",
+    "conservation",
+    "wildlife",
+    "IRF",
+    "world-ranger-congress",
+    "argentina",
+    "iguazu",
+    "landing-page",
+    "react",
+    "typescript"
+  ],
+  "author": "IRF World Ranger Congress Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/irf-world-ranger-congress-2027.git"
+  },
   "engines": {
     "node": ">=18.0.0",
     "pnpm": ">=8.0.0"
