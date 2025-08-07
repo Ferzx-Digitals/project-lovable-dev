@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import forestBackground from '@/assets/forest-background.jpg';
 import forestForeground from '@/assets/forest-foreground.png';
-import toucaniFlying from '@/assets/toucan-flying.png';
 
 const HeroSection = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -29,20 +28,6 @@ const HeroSection = () => {
       
       {/* Sky Gradient Overlay */}
       <div className="parallax-layer sky-gradient opacity-30" />
-      
-      {/* Flying Toucan */}
-      <div 
-        className="absolute top-20 left-0 w-24 h-24 z-30 fly-across"
-        style={{
-          animationDelay: '2s',
-        }}
-      >
-        <img 
-          src={toucaniFlying} 
-          alt="Flying toucan" 
-          className="w-full h-full object-contain"
-        />
-      </div>
       
       {/* Content Container */}
       <div className="relative z-20 h-full flex items-center justify-center">
