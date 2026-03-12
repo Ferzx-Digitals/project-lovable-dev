@@ -20,16 +20,16 @@ const Press = () => {
 
       <section className="py-16 px-4 section-leaf-pattern">
         <div className="container mx-auto max-w-5xl">
-          <h2 className="text-3xl font-bold font-montserrat text-forest-deep mb-8">{t('press.conferenceTitle')}</h2>
-          <div className="grid md:grid-cols-4 gap-4">
+          <h2 className="text-2xl font-bold font-montserrat text-forest-deep mb-6">{t('press.conferenceTitle')}</h2>
+          <div className="grid md:grid-cols-4 gap-3">
             {[
               { label: t('common.date'), value: t('press.conferenceDate') },
               { label: t('common.time'), value: t('press.conferenceTime') },
               { label: t('common.location'), value: t('press.conferenceLocation') },
               { label: t('common.remoteAccess'), value: t('press.remoteAccess') },
             ].map((item) => (
-              <div key={item.label} className="bg-card rounded-xl p-5 border border-border shadow-sm hover:shadow-md transition-shadow">
-                <p className="text-sm text-forest-primary font-semibold mb-1">{item.label}</p>
+              <div key={item.label} className="bg-card rounded-lg p-4 border border-border/50 shadow-sm">
+                <p className="text-xs text-forest-primary font-semibold mb-1">{item.label}</p>
                 <p className="text-foreground/80 text-sm">{item.value}</p>
               </div>
             ))}
@@ -39,13 +39,13 @@ const Press = () => {
 
       <section className="py-16 px-4 section-forest-tint">
         <div className="container mx-auto max-w-5xl">
-          <h2 className="text-3xl font-bold font-montserrat text-forest-deep mb-4">{t('press.pressKit')}</h2>
-          <p className="text-muted-foreground mb-6">{t('press.pressKitDesc')}</p>
-          <div className="grid md:grid-cols-3 gap-4">
+          <h2 className="text-2xl font-bold font-montserrat text-forest-deep mb-3">{t('press.pressKit')}</h2>
+          <p className="text-muted-foreground text-sm mb-6">{t('press.pressKitDesc')}</p>
+          <div className="grid md:grid-cols-3 gap-3">
             {['English', 'Español', 'Français'].map((lang) => (
-              <div key={lang} className="bg-card rounded-xl p-5 border border-border text-center shadow-sm">
-                <p className="font-medium text-foreground">Press Kit ({lang})</p>
-                <span className="text-sm text-muted-foreground">— {t('press.comingSoon')}</span>
+              <div key={lang} className="bg-card rounded-lg p-4 border border-border/50 text-center shadow-sm">
+                <p className="font-medium text-foreground text-sm">Press Kit ({lang})</p>
+                <span className="text-xs text-muted-foreground">— {t('press.comingSoon')}</span>
               </div>
             ))}
           </div>
@@ -54,14 +54,14 @@ const Press = () => {
 
       <section className="py-16 px-4 section-leaf-pattern">
         <div className="container mx-auto max-w-5xl">
-          <h2 className="text-3xl font-bold font-montserrat text-forest-deep mb-8">{t('press.releasesTitle')}</h2>
-          <div className="space-y-4">
+          <h2 className="text-2xl font-bold font-montserrat text-forest-deep mb-6">{t('press.releasesTitle')}</h2>
+          <div className="space-y-3">
             {pressReleases.map((pr, i) => (
-              <div key={i} className="card-nature p-6 flex flex-col md:flex-row gap-4 items-start">
-                <span className="text-sm text-forest-primary font-semibold whitespace-nowrap">{pr.date}</span>
+              <div key={i} className="bg-card rounded-lg p-5 border border-border/50 shadow-sm flex flex-col md:flex-row gap-3 items-start">
+                <span className="text-xs text-forest-primary font-semibold whitespace-nowrap">{pr.date}</span>
                 <div>
-                  <h3 className="font-bold text-forest-deep">{pr.title}</h3>
-                  <p className="text-sm text-muted-foreground mt-1">{pr.desc}</p>
+                  <h3 className="font-bold text-forest-deep text-sm">{pr.title}</h3>
+                  <p className="text-xs text-muted-foreground mt-1">{pr.desc}</p>
                 </div>
               </div>
             ))}
@@ -71,17 +71,17 @@ const Press = () => {
 
       <section className="py-16 px-4 section-earth-tint">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold font-montserrat text-forest-deep mb-4">{t('press.galleryTitle')}</h2>
-          <p className="text-muted-foreground mb-8">{t('press.galleryDesc')}</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <h2 className="text-2xl font-bold font-montserrat text-forest-deep mb-3">{t('press.galleryTitle')}</h2>
+          <p className="text-muted-foreground text-sm mb-6">{t('press.galleryDesc')}</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
             {Array.from({ length: 16 }, (_, i) => (
-              <div key={i} className="aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+              <div key={i} className="aspect-square rounded-lg overflow-hidden hover:shadow-md transition-shadow">
                 <img src={`${WRC_IMG}/photo_gallery/${i + 1}.jpg`} alt={`Congress photo ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
               </div>
             ))}
           </div>
-          <div className="text-center mt-8">
-            <a href={PHOTO_GALLERY_DRIVE} target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-forest-primary text-primary-foreground rounded-full font-semibold hover:bg-forest-deep transition-colors shadow-forest">
+          <div className="text-center mt-6">
+            <a href={PHOTO_GALLERY_DRIVE} target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-forest-primary text-primary-foreground rounded-full font-semibold hover:bg-forest-deep transition-colors shadow-forest text-sm">
               {t('press.downloadAll')}
             </a>
           </div>
@@ -90,10 +90,10 @@ const Press = () => {
 
       <section className="py-16 px-4 section-leaf-pattern">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-2xl font-bold font-montserrat text-forest-deep mb-4">{t('press.whoAreRangers')}</h2>
-          <p className="text-foreground/80 mb-8">{t('press.whoAreRangersDesc')}</p>
-          <h2 className="text-2xl font-bold font-montserrat text-forest-deep mb-4">{t('press.whyImportant')}</h2>
-          <p className="text-foreground/80">{t('press.whyImportantDesc')}</p>
+          <h2 className="text-xl font-bold font-montserrat text-forest-deep mb-3">{t('press.whoAreRangers')}</h2>
+          <p className="text-foreground/80 text-sm mb-6">{t('press.whoAreRangersDesc')}</p>
+          <h2 className="text-xl font-bold font-montserrat text-forest-deep mb-3">{t('press.whyImportant')}</h2>
+          <p className="text-foreground/80 text-sm">{t('press.whyImportantDesc')}</p>
         </div>
       </section>
 
@@ -102,9 +102,9 @@ const Press = () => {
           <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-gold-warm blur-3xl" />
         </div>
         <div className="container mx-auto max-w-3xl relative z-10">
-          <h2 className="text-2xl font-bold font-montserrat text-primary-foreground mb-4">{t('press.pressContact')}</h2>
-          <p className="text-primary-foreground/80 mb-6">{t('press.pressContactDesc')}</p>
-          <a href={`mailto:${CONTACT_EMAIL}`} className="text-gold-warm text-lg font-semibold hover:underline">{CONTACT_EMAIL}</a>
+          <h2 className="text-xl font-bold font-montserrat text-primary-foreground mb-3">{t('press.pressContact')}</h2>
+          <p className="text-primary-foreground/80 text-sm mb-4">{t('press.pressContactDesc')}</p>
+          <a href={`mailto:${CONTACT_EMAIL}`} className="text-gold-warm font-semibold hover:underline">{CONTACT_EMAIL}</a>
         </div>
       </section>
     </div>

@@ -29,23 +29,23 @@ const About = () => {
 
       <section className="py-16 px-4 section-leaf-pattern">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold font-montserrat text-forest-deep mb-6">{t('about.rangersTitle')}</h2>
-          <p className="text-foreground/80 mb-4 leading-relaxed">{t('about.rangersDesc')}</p>
-          <p className="text-foreground/80 leading-relaxed">{t('about.rangersDesc2')}</p>
+          <h2 className="text-2xl font-bold font-montserrat text-forest-deep mb-4">{t('about.rangersTitle')}</h2>
+          <p className="text-foreground/80 mb-3 leading-relaxed text-sm">{t('about.rangersDesc')}</p>
+          <p className="text-foreground/80 leading-relaxed text-sm">{t('about.rangersDesc2')}</p>
         </div>
       </section>
 
       <section className="py-16 px-4 section-forest-tint">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold font-montserrat text-forest-deep mb-2">{t('about.aboutTitle')}</h2>
-          <p className="text-gold-warm font-semibold mb-6">{t('about.aboutLocation')}</p>
-          <p className="text-foreground/80 mb-4">{t('about.aboutDesc')}</p>
-          <p className="text-foreground/80 mb-4">{t('about.aboutDesc2')}</p>
-          <p className="text-foreground/80">{t('about.aboutDesc3')}</p>
+          <h2 className="text-2xl font-bold font-montserrat text-forest-deep mb-2">{t('about.aboutTitle')}</h2>
+          <p className="text-gold-warm font-semibold text-sm mb-4">{t('about.aboutLocation')}</p>
+          <p className="text-foreground/80 mb-3 text-sm">{t('about.aboutDesc')}</p>
+          <p className="text-foreground/80 mb-3 text-sm">{t('about.aboutDesc2')}</p>
+          <p className="text-foreground/80 text-sm">{t('about.aboutDesc3')}</p>
         </div>
       </section>
 
-      <section className="py-16 px-4 section-leaf-pattern">
+      <section className="py-14 px-4 section-leaf-pattern">
         <div className="container mx-auto max-w-4xl text-center">
           <CountdownTimer />
         </div>
@@ -53,19 +53,19 @@ const About = () => {
 
       <section className="py-16 px-4 section-earth-tint">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold font-montserrat text-forest-deep text-center mb-12">{t('about.activitiesTitle')}</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <h2 className="text-2xl font-bold font-montserrat text-forest-deep text-center mb-10">{t('about.activitiesTitle')}</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {activities.map((a) => (
-              <div key={a.title} className="bg-card rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-border group">
-                <div className="h-48 overflow-hidden">
+              <div key={a.title} className="bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all border border-border/50 group">
+                <div className="h-44 overflow-hidden">
                   <img src={a.img} alt={a.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
-                <div className="p-6">
+                <div className="p-5">
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="text-2xl">{a.icon}</span>
-                    <h3 className="text-lg font-bold text-forest-deep">{a.title}</h3>
+                    <span className="text-xl">{a.icon}</span>
+                    <h3 className="text-base font-bold text-forest-deep">{a.title}</h3>
                   </div>
-                  <p className="text-sm text-muted-foreground">{a.desc}</p>
+                  <p className="text-xs text-muted-foreground">{a.desc}</p>
                 </div>
               </div>
             ))}
@@ -78,10 +78,10 @@ const About = () => {
           <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-gold-warm blur-3xl" />
         </div>
         <div className="container mx-auto max-w-4xl text-center relative z-10">
-          <h2 className="text-3xl font-bold font-montserrat text-primary-foreground mb-4">{t('about.themeTitle')}</h2>
-          <p className="text-2xl text-gold-warm italic mb-6">{t('about.themeQuote')}</p>
-          <p className="text-primary-foreground/80">{t('about.themeDesc')}</p>
-          <Link to={`/${language}/congress-theme`} className="inline-block mt-6 px-6 py-3 bg-gold-warm text-forest-deep font-semibold rounded-full hover:bg-gold-bright transition-colors shadow-lg">
+          <h2 className="text-2xl font-bold font-montserrat text-primary-foreground mb-3">{t('about.themeTitle')}</h2>
+          <p className="text-xl text-gold-warm italic mb-4">{t('about.themeQuote')}</p>
+          <p className="text-primary-foreground/80 text-sm">{t('about.themeDesc')}</p>
+          <Link to={`/${language}/congress-theme`} className="inline-block mt-6 px-6 py-3 bg-gold-warm text-forest-deep font-semibold rounded-full hover:bg-gold-bright transition-colors shadow-lg text-sm">
             {t('common.learnMore')}
           </Link>
         </div>
@@ -89,19 +89,19 @@ const About = () => {
 
       <section className="py-16 px-4 section-leaf-pattern">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold font-montserrat text-forest-deep text-center mb-4">{t('about.objectivesTitle')}</h2>
-          <p className="text-center text-muted-foreground mb-12">{t('about.objectivesHover')}</p>
-          <div className="grid md:grid-cols-2 gap-6">
+          <h2 className="text-2xl font-bold font-montserrat text-forest-deep text-center mb-3">{t('about.objectivesTitle')}</h2>
+          <p className="text-center text-muted-foreground text-sm mb-10">{t('about.objectivesHover')}</p>
+          <div className="grid md:grid-cols-2 gap-4">
             {objectives.map((obj) => (
-              <div key={obj.num} className="relative group bg-card rounded-2xl overflow-hidden shadow-md border border-border hover:shadow-xl transition-all hover:-translate-y-1">
-                <div className="h-48 overflow-hidden">
+              <div key={obj.num} className="relative group bg-card rounded-xl overflow-hidden shadow-sm border border-border/50 hover:shadow-md transition-all">
+                <div className="h-44 overflow-hidden">
                   <img src={obj.img} alt={obj.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/80 to-transparent" />
                 </div>
-                <div className="p-6">
-                  <span className="text-3xl font-bold text-forest-primary/20">{obj.num}</span>
-                  <h3 className="text-lg font-bold text-forest-deep mt-1">{obj.title}</h3>
-                  <p className="text-sm text-muted-foreground mt-2">{obj.desc}</p>
+                <div className="p-5">
+                  <span className="text-2xl font-bold text-forest-primary/20">{obj.num}</span>
+                  <h3 className="text-base font-bold text-forest-deep mt-1">{obj.title}</h3>
+                  <p className="text-xs text-muted-foreground mt-2">{obj.desc}</p>
                 </div>
               </div>
             ))}

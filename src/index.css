@@ -9,7 +9,7 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Forest Color Palette */
-    --background: 120 20% 93%;
+    --background: 120 15% 95%;
     --foreground: 140 30% 15%;
 
     /* Forest greens */
@@ -37,10 +37,10 @@ All colors MUST be HSL.
     --jaguar-spot: 30 20% 25%;
 
     /* Semantic tokens */
-    --card: 120 25% 96%;
+    --card: 120 20% 97%;
     --card-foreground: 140 30% 15%;
 
-    --popover: 120 25% 96%;
+    --popover: 120 20% 97%;
     --popover-foreground: 140 30% 15%;
 
     --primary: 135 55% 35%;
@@ -49,8 +49,8 @@ All colors MUST be HSL.
     --secondary: 120 25% 85%;
     --secondary-foreground: 140 30% 15%;
 
-    --muted: 120 20% 88%;
-    --muted-foreground: 140 25% 45%;
+    --muted: 120 15% 90%;
+    --muted-foreground: 140 20% 45%;
 
     --accent: 45 85% 65%;
     --accent-foreground: 140 30% 15%;
@@ -58,8 +58,8 @@ All colors MUST be HSL.
     --destructive: 0 84% 60%;
     --destructive-foreground: 120 25% 95%;
 
-    --border: 120 20% 82%;
-    --input: 120 20% 82%;
+    --border: 120 15% 88%;
+    --input: 120 15% 88%;
     --ring: 135 55% 35%;
 
     /* Beautiful gradients */
@@ -69,9 +69,9 @@ All colors MUST be HSL.
     --gradient-sunset: linear-gradient(45deg, hsl(var(--gold-warm)), hsl(var(--toucan-orange)));
     
     /* Elegant shadows */
-    --shadow-forest: 0 10px 30px -10px hsl(var(--forest-deep) / 0.3);
-    --shadow-earth: 0 8px 25px -8px hsl(var(--earth-brown) / 0.4);
-    --shadow-floating: 0 20px 40px -15px hsl(var(--forest-primary) / 0.2);
+    --shadow-forest: 0 4px 16px -4px hsl(var(--forest-deep) / 0.15);
+    --shadow-earth: 0 4px 16px -4px hsl(var(--earth-brown) / 0.15);
+    --shadow-floating: 0 8px 30px -8px hsl(var(--forest-primary) / 0.12);
 
     /* Smooth transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -180,43 +180,26 @@ All colors MUST be HSL.
   /* Section background patterns */
   .section-leaf-pattern {
     background-image: 
-      radial-gradient(ellipse at 10% 20%, hsl(var(--forest-light) / 0.08) 0%, transparent 50%),
-      radial-gradient(ellipse at 90% 80%, hsl(var(--gold-warm) / 0.06) 0%, transparent 50%);
+      radial-gradient(ellipse at 10% 20%, hsl(var(--forest-light) / 0.06) 0%, transparent 50%),
+      radial-gradient(ellipse at 90% 80%, hsl(var(--gold-warm) / 0.04) 0%, transparent 50%);
   }
 
   .section-forest-tint {
-    background: linear-gradient(180deg, hsl(var(--forest-mist) / 0.3) 0%, hsl(var(--background)) 100%);
+    background: linear-gradient(180deg, hsl(var(--forest-mist) / 0.2) 0%, hsl(var(--background)) 100%);
   }
 
   .section-earth-tint {
-    background: linear-gradient(180deg, hsl(var(--earth-light) / 0.2) 0%, hsl(var(--background)) 100%);
+    background: linear-gradient(180deg, hsl(var(--earth-light) / 0.15) 0%, hsl(var(--background)) 100%);
   }
 
-  /* Enhanced card styles */
+  /* Clean card styles - lighter, no heavy borders */
   .card-nature {
-    @apply bg-card rounded-2xl border border-border shadow-md;
-    border-left: 4px solid hsl(var(--forest-primary));
+    @apply bg-card rounded-xl border border-border/60 shadow-sm;
   }
 
   .card-gold {
-    @apply bg-card rounded-2xl border border-border shadow-md;
-    border-left: 4px solid hsl(var(--gold-warm));
-  }
-
-  /* Decorative heading styles */
-  .heading-decorated {
-    @apply relative inline-block;
-  }
-  .heading-decorated::before,
-  .heading-decorated::after {
-    content: '';
-    @apply absolute top-1/2 w-12 h-0.5 bg-forest-primary;
-  }
-  .heading-decorated::before {
-    right: calc(100% + 1rem);
-  }
-  .heading-decorated::after {
-    left: calc(100% + 1rem);
+    @apply bg-card rounded-xl border border-border/60 shadow-sm;
+    border-left: 3px solid hsl(var(--gold-warm));
   }
 
   /* Parallax base styles */

@@ -8,7 +8,7 @@ interface PageBannerProps {
 
 const PageBanner = ({ title, subtitle, backgroundImage }: PageBannerProps) => {
   return (
-    <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden">
+    <section className="relative h-[340px] md:h-[400px] flex items-center justify-center overflow-hidden">
       {/* Background */}
       <div
         className="absolute inset-0 z-0"
@@ -19,33 +19,18 @@ const PageBanner = ({ title, subtitle, backgroundImage }: PageBannerProps) => {
         }}
       />
       {/* Overlay */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-forest-deep/70 via-forest-deep/50 to-forest-deep/80" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-forest-deep/80 via-forest-deep/60 to-forest-deep/90" />
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 pt-16">
-        <h1
-          className="text-4xl md:text-6xl font-bold font-montserrat mb-4"
-          style={{
-            background: 'linear-gradient(135deg, hsl(var(--primary-foreground)), hsl(var(--gold-warm)))',
-            WebkitBackgroundClip: 'text',
-            backgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-          }}
-        >
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-montserrat mb-4 text-gold-warm">
           {title}
         </h1>
         {subtitle && (
-          <p className="text-lg md:text-xl text-primary-foreground/80 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-primary-foreground/80 max-w-3xl mx-auto leading-relaxed">
             {subtitle}
           </p>
         )}
-      </div>
-
-      {/* Bottom fade - matches new background */}
-      <div className="absolute bottom-0 left-0 right-0 h-20 z-10">
-        <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-          <path d="M0,30 C480,70 960,10 1440,30 L1440,80 L0,80 Z" fill="hsl(120, 20%, 93%)" />
-        </svg>
       </div>
     </section>
   );
