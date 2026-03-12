@@ -48,22 +48,18 @@ const HeroSection = () => {
 
   return (
     <section className="relative h-screen overflow-hidden">
-      {/* Slides */}
       {slides.map((slide, i) => (
         <div
           key={i}
           className="absolute inset-0 transition-opacity duration-[800ms] ease-in-out"
           style={{ opacity: i === current ? 1 : 0, zIndex: i === current ? 1 : 0 }}
         >
-          {/* Background Image */}
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${slide.image})` }}
           />
-          {/* Dark overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60" />
 
-          {/* Slide Content */}
           <div className="absolute inset-0 flex items-center z-10">
             <div className="container mx-auto max-w-7xl px-6 sm:px-10 lg:px-16 pt-16 sm:pt-0">
               <div
@@ -109,7 +105,6 @@ const HeroSection = () => {
         </div>
       ))}
 
-      {/* Navigation Arrows */}
       <button
         onClick={prev}
         className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-black/30 text-white hover:bg-black/50 transition-colors backdrop-blur-sm"
@@ -125,7 +120,6 @@ const HeroSection = () => {
         <ChevronRight className="w-6 h-6" />
       </button>
 
-      {/* Dots */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
         {slides.map((_, i) => (
           <button
@@ -139,10 +133,10 @@ const HeroSection = () => {
         ))}
       </div>
 
-      {/* Bottom wave transition */}
+      {/* Bottom wave - matches new background color */}
       <div className="absolute bottom-0 left-0 right-0 z-10">
         <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
-          <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z" fill="hsl(120, 15%, 97%)" />
+          <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z" fill="hsl(120, 20%, 93%)" />
         </svg>
       </div>
     </section>
