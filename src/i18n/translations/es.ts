@@ -20,6 +20,21 @@ export const es = {
     learnMore: 'Más Información',
     saveTheDate: 'RESERVA LA FECHA',
     quote: 'Donde los guardianes de la naturaleza se unen bajo la bruma de las Cataratas del Iguazú',
+    slide1: {
+      title: '11° Congreso Mundial de Guardaparques IRF',
+      subtitle: 'Puerto Iguazú, Argentina · 19-23 Abril 2027',
+      description: 'Únete a más de 500 guardaparques y profesionales de la conservación de todo el mundo',
+    },
+    slide2: {
+      title: 'SIGUNARA',
+      subtitle: 'Asociación Anfitriona de Guardaparques',
+      description: 'El Sindicato de Guardaparques Nacionales de la República Argentina, fundado en 1990',
+    },
+    slide3: {
+      title: 'Puerto Iguazú, Misiones, Argentina',
+      subtitle: 'Un Paraíso Tropical en la Triple Frontera',
+      description: 'En la confluencia de Argentina, Paraguay y Brasil, en el corazón de la Selva Atlántica',
+    },
   },
   welcome: {
     title: 'Puerto Iguazú Te Da La Bienvenida…',
