@@ -1,15 +1,20 @@
-import FloatingElements from '@/components/FloatingElements';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
-import ConnectSection from '@/components/ConnectSection';
+import ContactSection from '@/components/ContactSection';
+import Footer from '@/components/Footer';
+import FloatingElements from '@/components/FloatingElements';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      {/* Floating animated elements */}
       <FloatingElements />
+      
+      {/* Main sections */}
       <HeroSection />
       <AboutSection />
-      <ConnectSection />
+      <ContactSection />
+      <Footer />
     </div>
   );
 };
