@@ -41,14 +41,14 @@ const CongressEvent = () => {
 
       <section className="py-16 px-4 section-leaf-pattern">
         <div className="container mx-auto max-w-5xl">
-          <h2 className="text-3xl font-bold font-montserrat text-forest-deep text-center mb-4">{t('congressEvent.scheduleTitle')}</h2>
-          <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">{t('congressEvent.scheduleDesc')}</p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <h2 className="text-2xl font-bold font-montserrat text-forest-deep text-center mb-3">{t('congressEvent.scheduleTitle')}</h2>
+          <p className="text-center text-muted-foreground text-sm mb-8 max-w-2xl mx-auto">{t('congressEvent.scheduleDesc')}</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
             {schedule.map((day, i) => (
-              <div key={i} className="bg-card rounded-2xl p-6 border border-border shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
-                <span className="text-3xl mb-3 block">{day.icon}</span>
-                <h3 className="font-bold text-forest-deep mb-2">{day.day}</h3>
-                <p className="text-sm text-muted-foreground">{day.events}</p>
+              <div key={i} className="bg-card rounded-xl p-5 border border-border/50 shadow-sm hover:shadow-md transition-all">
+                <span className="text-2xl mb-2 block">{day.icon}</span>
+                <h3 className="font-bold text-forest-deep text-sm mb-1">{day.day}</h3>
+                <p className="text-xs text-muted-foreground">{day.events}</p>
               </div>
             ))}
           </div>
@@ -57,20 +57,20 @@ const CongressEvent = () => {
 
       <section className="py-16 px-4 section-earth-tint">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold font-montserrat text-forest-deep text-center mb-12">{t('about.activitiesTitle')}</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <h2 className="text-2xl font-bold font-montserrat text-forest-deep text-center mb-10">{t('about.activitiesTitle')}</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {activities.map((a) => (
-              <div key={a.title} className="bg-card rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-border group">
-                <div className="h-48 overflow-hidden">
+              <div key={a.title} className="bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all border border-border/50 group">
+                <div className="h-44 overflow-hidden">
                   <img src={a.img} alt={a.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-2xl">{a.icon}</span>
-                    <h3 className="text-lg font-bold text-forest-deep">{a.title}</h3>
+                <div className="p-5">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-xl">{a.icon}</span>
+                    <h3 className="text-base font-bold text-forest-deep">{a.title}</h3>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-2">{a.desc}</p>
-                  <span className="text-xs text-forest-primary font-semibold">{a.count}</span>
+                  <p className="text-xs text-muted-foreground mb-1">{a.desc}</p>
+                  <span className="text-[10px] text-forest-primary font-semibold">{a.count}</span>
                 </div>
               </div>
             ))}
@@ -80,18 +80,18 @@ const CongressEvent = () => {
 
       <section className="py-16 px-4 section-leaf-pattern">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold font-montserrat text-forest-deep text-center mb-4">{t('congressEvent.fieldTripsTitle')}</h2>
-          <p className="text-center text-muted-foreground mb-10 max-w-3xl mx-auto">{t('congressEvent.fieldTripsDesc')}</p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <h2 className="text-2xl font-bold font-montserrat text-forest-deep text-center mb-3">{t('congressEvent.fieldTripsTitle')}</h2>
+          <p className="text-center text-muted-foreground text-sm mb-8 max-w-3xl mx-auto">{t('congressEvent.fieldTripsDesc')}</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {fieldTrips.map((trip, i) => (
-              <div key={i} className="bg-card rounded-2xl overflow-hidden shadow-md border border-border group hover:shadow-xl transition-all hover:-translate-y-1">
-                <div className="h-48 overflow-hidden relative">
+              <div key={i} className="bg-card rounded-xl overflow-hidden shadow-sm border border-border/50 group hover:shadow-md transition-all">
+                <div className="h-44 overflow-hidden relative">
                   <img src={trip.img} alt={trip.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                  <span className="absolute top-3 right-3 bg-forest-primary/90 text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full">{trip.country}</span>
+                  <span className="absolute top-2 right-2 bg-forest-primary/90 text-primary-foreground text-[10px] font-semibold px-2 py-0.5 rounded-full">{trip.country}</span>
                 </div>
-                <div className="p-5">
-                  <h3 className="font-bold text-forest-deep mb-2">{trip.title}</h3>
-                  <p className="text-sm text-muted-foreground">{trip.desc}</p>
+                <div className="p-4">
+                  <h3 className="font-bold text-forest-deep text-sm mb-1">{trip.title}</h3>
+                  <p className="text-xs text-muted-foreground">{trip.desc}</p>
                 </div>
               </div>
             ))}
@@ -106,11 +106,11 @@ const CongressEvent = () => {
         <div className="container mx-auto max-w-4xl relative z-10">
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="md:w-1/2">
-              <img src={`${WRC_IMG}/congress-events/Iguazu%20National%20Park.jpg`} alt="Devil's Throat" className="rounded-2xl shadow-xl" />
+              <img src={`${WRC_IMG}/congress-events/Iguazu%20National%20Park.jpg`} alt="Devil's Throat" className="rounded-xl shadow-lg" />
             </div>
             <div className="md:w-1/2">
-              <h2 className="text-2xl font-bold font-montserrat text-primary-foreground mb-4">{t('program.devilsThroat')}</h2>
-              <p className="text-primary-foreground/80 leading-relaxed">{t('program.devilsThroatDesc')}</p>
+              <h2 className="text-xl font-bold font-montserrat text-primary-foreground mb-3">{t('program.devilsThroat')}</h2>
+              <p className="text-primary-foreground/80 text-sm leading-relaxed">{t('program.devilsThroatDesc')}</p>
             </div>
           </div>
         </div>
@@ -118,8 +118,8 @@ const CongressEvent = () => {
 
       <section className="py-16 px-4 section-leaf-pattern">
         <CountdownTimer />
-        <div className="text-center mt-8">
-          <Link to={`/${language}/register`} className="px-8 py-4 bg-forest-primary text-primary-foreground font-bold rounded-full hover:bg-forest-deep transition-colors shadow-forest">
+        <div className="text-center mt-6">
+          <Link to={`/${language}/register`} className="px-8 py-3 bg-forest-primary text-primary-foreground font-bold rounded-full hover:bg-forest-deep transition-colors shadow-forest text-sm">
             {t('common.registerNow')}
           </Link>
         </div>
