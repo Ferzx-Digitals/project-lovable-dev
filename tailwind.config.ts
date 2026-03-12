@@ -57,6 +57,22 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        forest: {
+          deep: "hsl(var(--forest-deep))",
+          primary: "hsl(var(--forest-primary))",
+          light: "hsl(var(--forest-light))",
+          mist: "hsl(var(--forest-mist))",
+        },
+        earth: {
+          brown: "hsl(var(--earth-brown))",
+        },
+        gold: {
+          warm: "hsl(var(--gold-warm))",
+        },
+        sky: {
+          blue: "hsl(var(--sky-blue))",
+          light: "hsl(var(--sky-light))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
