@@ -20,6 +20,21 @@ export const en = {
     learnMore: 'Learn More',
     saveTheDate: 'SAVE THE DATE',
     quote: 'Where guardians of nature unite beneath the mist of Iguazú Falls',
+    slide1: {
+      title: '11th IRF World Ranger Congress',
+      subtitle: 'Puerto Iguazu, Argentina · 19-23 April 2027',
+      description: 'Join 500+ rangers and conservation professionals from around the world',
+    },
+    slide2: {
+      title: 'SIGUNARA',
+      subtitle: 'Host Ranger Association',
+      description: 'The Syndicate of National Rangers of Argentina Republic, established in 1990',
+    },
+    slide3: {
+      title: 'Puerto Iguazu, Misiones, Argentina',
+      subtitle: 'A Tropical Paradise at the Triple Frontier',
+      description: 'At the confluence of Argentina, Paraguay, and Brazil in the heart of the Atlantic Forest',
+    },
   },
   welcome: {
     title: 'Puerto Iguazu Welcomes You…',

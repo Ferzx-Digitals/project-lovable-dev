@@ -20,6 +20,21 @@ export const fr = {
     learnMore: 'En Savoir Plus',
     saveTheDate: 'RÉSERVEZ LA DATE',
     quote: 'Là où les gardiens de la nature s\'unissent sous la brume des chutes d\'Iguazú',
+    slide1: {
+      title: '11e Congrès Mondial des Rangers IRF',
+      subtitle: 'Puerto Iguazu, Argentine · 19-23 Avril 2027',
+      description: 'Rejoignez plus de 500 rangers et professionnels de la conservation du monde entier',
+    },
+    slide2: {
+      title: 'SIGUNARA',
+      subtitle: 'Association de Rangers Hôte',
+      description: 'Le Syndicat des Gardes Nationaux de la République Argentine, fondé en 1990',
+    },
+    slide3: {
+      title: 'Puerto Iguazu, Misiones, Argentine',
+      subtitle: 'Un Paradis Tropical à la Triple Frontière',
+      description: 'Au confluent de l\'Argentine, du Paraguay et du Brésil, au cœur de la Forêt Atlantique',
+    },
   },
   welcome: {
     title: 'Puerto Iguazu Vous Accueille…',
