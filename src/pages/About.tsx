@@ -27,7 +27,7 @@ const About = () => {
     <div>
       <PageBanner title={t('about.banner')} subtitle={t('about.bannerSub')} backgroundImage={`${WRC_IMG}/congress-introduction/Banner.jpg`} />
 
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 section-leaf-pattern">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold font-montserrat text-forest-deep mb-6">{t('about.rangersTitle')}</h2>
           <p className="text-foreground/80 mb-4 leading-relaxed">{t('about.rangersDesc')}</p>
@@ -35,7 +35,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-forest-mist/20">
+      <section className="py-16 px-4 section-forest-tint">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold font-montserrat text-forest-deep mb-2">{t('about.aboutTitle')}</h2>
           <p className="text-gold-warm font-semibold mb-6">{t('about.aboutLocation')}</p>
@@ -45,18 +45,18 @@ const About = () => {
         </div>
       </section>
 
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 section-leaf-pattern">
         <div className="container mx-auto max-w-4xl text-center">
           <CountdownTimer />
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-forest-mist/10">
+      <section className="py-16 px-4 section-earth-tint">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-bold font-montserrat text-forest-deep text-center mb-12">{t('about.activitiesTitle')}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {activities.map((a) => (
-              <div key={a.title} className="bg-card rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-border group">
+              <div key={a.title} className="bg-card rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-border group">
                 <div className="h-48 overflow-hidden">
                   <img src={a.img} alt={a.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
@@ -73,24 +73,27 @@ const About = () => {
         </div>
       </section>
 
-      <section className="py-16 px-4 forest-gradient">
-        <div className="container mx-auto max-w-4xl text-center">
+      <section className="py-16 px-4 forest-gradient relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-gold-warm blur-3xl" />
+        </div>
+        <div className="container mx-auto max-w-4xl text-center relative z-10">
           <h2 className="text-3xl font-bold font-montserrat text-primary-foreground mb-4">{t('about.themeTitle')}</h2>
           <p className="text-2xl text-gold-warm italic mb-6">{t('about.themeQuote')}</p>
           <p className="text-primary-foreground/80">{t('about.themeDesc')}</p>
-          <Link to={`/${language}/congress-theme`} className="inline-block mt-6 px-6 py-3 bg-gold-warm text-forest-deep font-semibold rounded-full hover:bg-gold-bright transition-colors">
+          <Link to={`/${language}/congress-theme`} className="inline-block mt-6 px-6 py-3 bg-gold-warm text-forest-deep font-semibold rounded-full hover:bg-gold-bright transition-colors shadow-lg">
             {t('common.learnMore')}
           </Link>
         </div>
       </section>
 
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 section-leaf-pattern">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-bold font-montserrat text-forest-deep text-center mb-4">{t('about.objectivesTitle')}</h2>
           <p className="text-center text-muted-foreground mb-12">{t('about.objectivesHover')}</p>
           <div className="grid md:grid-cols-2 gap-6">
             {objectives.map((obj) => (
-              <div key={obj.num} className="relative group bg-card rounded-2xl overflow-hidden shadow-md border border-border hover:shadow-xl transition-all">
+              <div key={obj.num} className="relative group bg-card rounded-2xl overflow-hidden shadow-md border border-border hover:shadow-xl transition-all hover:-translate-y-1">
                 <div className="h-48 overflow-hidden">
                   <img src={obj.img} alt={obj.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/80 to-transparent" />

@@ -19,7 +19,7 @@ const PageBanner = ({ title, subtitle, backgroundImage }: PageBannerProps) => {
         }}
       />
       {/* Overlay */}
-      <div className="absolute inset-0 z-1 bg-gradient-to-b from-forest-deep/70 via-forest-deep/50 to-forest-deep/80" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-forest-deep/70 via-forest-deep/50 to-forest-deep/80" />
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 pt-16">
@@ -41,8 +41,12 @@ const PageBanner = ({ title, subtitle, backgroundImage }: PageBannerProps) => {
         )}
       </div>
 
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-background to-transparent z-10" />
+      {/* Bottom fade - matches new background */}
+      <div className="absolute bottom-0 left-0 right-0 h-20 z-10">
+        <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+          <path d="M0,30 C480,70 960,10 1440,30 L1440,80 L0,80 Z" fill="hsl(120, 20%, 93%)" />
+        </svg>
+      </div>
     </section>
   );
 };

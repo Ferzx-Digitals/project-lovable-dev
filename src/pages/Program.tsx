@@ -49,11 +49,11 @@ const Program = () => {
     <div>
       <PageBanner title={t('program.banner')} subtitle={t('program.bannerSub')} backgroundImage={`${WRC_IMG}/congress-program/Banner.jpg`} />
 
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 section-leaf-pattern">
         <div className="container mx-auto max-w-5xl">
           <div className="flex flex-wrap gap-2 mb-10 justify-center">
             {tabs.map((tab) => (
-              <button key={tab} onClick={() => setActiveTab(tab)} className={cn('px-5 py-2.5 rounded-full text-sm font-medium transition-colors', activeTab === tab ? 'bg-forest-primary text-primary-foreground' : 'bg-muted text-muted-foreground hover:bg-forest-primary/10')}>
+              <button key={tab} onClick={() => setActiveTab(tab)} className={cn('px-5 py-2.5 rounded-full text-sm font-medium transition-all', activeTab === tab ? 'bg-forest-primary text-primary-foreground shadow-forest' : 'bg-card text-muted-foreground hover:bg-forest-primary/10 border border-border')}>
                 {tabLabels[tab]}
               </button>
             ))}
@@ -79,9 +79,9 @@ const Program = () => {
           )}
 
           {activeTab === 'schedule' && (
-            <div className="space-y-6">
+            <div className="space-y-4">
               {schedule.map((day, i) => (
-                <div key={i} className="bg-card rounded-xl p-6 border border-border shadow-sm">
+                <div key={i} className="card-nature p-6">
                   <h3 className="text-lg font-bold text-forest-deep mb-3">{day.day}</h3>
                   <p className="text-foreground/80">{day.events}</p>
                   <p className="text-sm text-muted-foreground mt-2 italic">Detailed times to be announced</p>
@@ -93,7 +93,7 @@ const Program = () => {
           {activeTab === 'activities' && (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {activities.map((a, i) => (
-                <div key={i} className="bg-card rounded-2xl overflow-hidden shadow-md border border-border group">
+                <div key={i} className="bg-card rounded-2xl overflow-hidden shadow-md border border-border group hover:shadow-xl transition-all hover:-translate-y-1">
                   <div className="h-48 overflow-hidden"><img src={a.img} alt={a.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" /></div>
                   <div className="p-5">
                     <h3 className="font-bold text-forest-deep mb-2">{a.title}</h3>
@@ -110,7 +110,7 @@ const Program = () => {
               <p className="text-foreground/80 mb-8">{t('program.devilsThroatDesc')}</p>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {fieldTrips.map((trip, i) => (
-                  <div key={i} className="bg-card rounded-2xl overflow-hidden shadow-md border border-border group">
+                  <div key={i} className="bg-card rounded-2xl overflow-hidden shadow-md border border-border group hover:shadow-xl transition-all hover:-translate-y-1">
                     <div className="h-48 overflow-hidden"><img src={trip.img} alt={trip.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" /></div>
                     <div className="p-5">
                       <span className="text-xs text-forest-primary font-semibold">{trip.country}</span>

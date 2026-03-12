@@ -13,7 +13,7 @@ const Submit = () => {
     <div>
       <PageBanner title={t('submit.banner')} subtitle={t('submit.bannerSub')} backgroundImage={`${WRC_IMG}/submit/Banner.jpg`} />
 
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 section-leaf-pattern">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold font-montserrat text-forest-deep mb-6">{t('submit.guidelinesTitle')}</h2>
           <p className="text-foreground/80 mb-4">{t('submit.guidelinesDesc')}</p>
@@ -21,17 +21,17 @@ const Submit = () => {
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-forest-mist/20">
+      <section className="py-16 px-4 section-forest-tint">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold font-montserrat text-forest-deep mb-8">{t('submit.sessionTypes')}</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-card rounded-2xl p-8 shadow-md border border-border">
+            <div className="card-nature p-8">
               <span className="text-3xl mb-4 block">🎤</span>
               <h3 className="text-xl font-bold text-forest-deep mb-2">{t('submit.plenaryTitle')}</h3>
               <p className="text-muted-foreground text-sm mb-3">{t('submit.plenaryDesc')}</p>
               <p className="text-xs text-forest-primary font-semibold">{t('submit.plenaryDuration')}</p>
             </div>
-            <div className="bg-card rounded-2xl p-8 shadow-md border border-border">
+            <div className="card-gold p-8">
               <span className="text-3xl mb-4 block">🔬</span>
               <h3 className="text-xl font-bold text-forest-deep mb-2">{t('submit.workshopTitle')}</h3>
               <p className="text-muted-foreground text-sm mb-3">{t('submit.workshopDesc')}</p>
@@ -41,7 +41,7 @@ const Submit = () => {
         </div>
       </section>
 
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 section-leaf-pattern">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold font-montserrat text-forest-deep mb-4">{t('submit.whatYouNeed')}</h2>
           <p className="text-muted-foreground mb-6">{t('submit.whatYouNeedDesc')}</p>
@@ -56,13 +56,13 @@ const Submit = () => {
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-forest-mist/20">
+      <section className="py-16 px-4 section-earth-tint">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold font-montserrat text-forest-deep mb-4">{t('submit.streamsTitle')}</h2>
           <p className="text-muted-foreground mb-6">{t('submit.streamsDesc')}</p>
           <div className="space-y-3">
             {streams.map((s, i) => (
-              <div key={i} className="flex items-center gap-3 bg-card rounded-lg p-4 border border-border">
+              <div key={i} className="flex items-center gap-3 bg-card rounded-lg p-4 border border-border shadow-sm hover:shadow-md transition-shadow">
                 <span className="w-8 h-8 rounded-full bg-forest-primary text-primary-foreground flex items-center justify-center text-sm font-bold">{i + 1}</span>
                 <span className="font-medium text-foreground">{s}</span>
               </div>
@@ -71,24 +71,27 @@ const Submit = () => {
         </div>
       </section>
 
-      <section className="py-16 px-4 forest-gradient">
-        <div className="container mx-auto max-w-4xl text-center">
+      <section className="py-16 px-4 forest-gradient relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-gold-warm blur-3xl" />
+        </div>
+        <div className="container mx-auto max-w-4xl text-center relative z-10">
           <h2 className="text-3xl font-bold font-montserrat text-primary-foreground mb-4">{t('submit.submitTitle')}</h2>
           <p className="text-primary-foreground/80 mb-8">{t('submit.submitDesc')}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={EOI_FORMS.en} target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-gold-warm text-forest-deep rounded-full font-semibold hover:bg-gold-bright transition-colors">{t('submit.englishForm')}</a>
+            <a href={EOI_FORMS.en} target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-gold-warm text-forest-deep rounded-full font-semibold hover:bg-gold-bright transition-colors shadow-lg">{t('submit.englishForm')}</a>
             <a href={EOI_FORMS.es} target="_blank" rel="noopener noreferrer" className="px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground rounded-full font-semibold hover:bg-primary-foreground/10 transition-colors">{t('submit.spanishForm')}</a>
             <a href={EOI_FORMS.fr} target="_blank" rel="noopener noreferrer" className="px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground rounded-full font-semibold hover:bg-primary-foreground/10 transition-colors">{t('submit.frenchForm')}</a>
           </div>
         </div>
       </section>
 
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 section-leaf-pattern">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-2xl font-bold font-montserrat text-forest-deep mb-4">{t('submit.fundingTitle')}</h2>
           <p className="text-muted-foreground mb-6">{t('submit.fundingDesc')}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <a href={FUNDING_FORMS.en} target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 bg-forest-primary text-primary-foreground rounded-full text-sm font-semibold hover:bg-forest-deep transition-colors">{t('submit.fundingEN')}</a>
+            <a href={FUNDING_FORMS.en} target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 bg-forest-primary text-primary-foreground rounded-full text-sm font-semibold hover:bg-forest-deep transition-colors shadow-forest">{t('submit.fundingEN')}</a>
             <a href={FUNDING_FORMS.es} target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 border border-forest-primary text-forest-primary rounded-full text-sm font-semibold hover:bg-forest-primary/10 transition-colors">{t('submit.fundingES')}</a>
             <a href={FUNDING_FORMS.fr} target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 border border-forest-primary text-forest-primary rounded-full text-sm font-semibold hover:bg-forest-primary/10 transition-colors">{t('submit.fundingFR')}</a>
           </div>
