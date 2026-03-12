@@ -39,14 +39,13 @@ const CongressEvent = () => {
     <div>
       <PageBanner title={t('congressEvent.banner')} subtitle={t('congressEvent.bannerSub')} backgroundImage={`${WRC_IMG}/congress-program/Banner.jpg`} />
 
-      {/* Schedule Overview */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 section-leaf-pattern">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-3xl font-bold font-montserrat text-forest-deep text-center mb-4">{t('congressEvent.scheduleTitle')}</h2>
           <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">{t('congressEvent.scheduleDesc')}</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {schedule.map((day, i) => (
-              <div key={i} className="bg-card rounded-2xl p-6 border border-border shadow-sm hover:shadow-md transition-shadow">
+              <div key={i} className="bg-card rounded-2xl p-6 border border-border shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
                 <span className="text-3xl mb-3 block">{day.icon}</span>
                 <h3 className="font-bold text-forest-deep mb-2">{day.day}</h3>
                 <p className="text-sm text-muted-foreground">{day.events}</p>
@@ -56,13 +55,12 @@ const CongressEvent = () => {
         </div>
       </section>
 
-      {/* Activities */}
-      <section className="py-16 px-4 bg-forest-mist/20">
+      <section className="py-16 px-4 section-earth-tint">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-bold font-montserrat text-forest-deep text-center mb-12">{t('about.activitiesTitle')}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {activities.map((a) => (
-              <div key={a.title} className="bg-card rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-border group">
+              <div key={a.title} className="bg-card rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-border group">
                 <div className="h-48 overflow-hidden">
                   <img src={a.img} alt={a.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
@@ -80,14 +78,13 @@ const CongressEvent = () => {
         </div>
       </section>
 
-      {/* Field Trips */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 section-leaf-pattern">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-bold font-montserrat text-forest-deep text-center mb-4">{t('congressEvent.fieldTripsTitle')}</h2>
           <p className="text-center text-muted-foreground mb-10 max-w-3xl mx-auto">{t('congressEvent.fieldTripsDesc')}</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {fieldTrips.map((trip, i) => (
-              <div key={i} className="bg-card rounded-2xl overflow-hidden shadow-md border border-border group hover:shadow-xl transition-shadow">
+              <div key={i} className="bg-card rounded-2xl overflow-hidden shadow-md border border-border group hover:shadow-xl transition-all hover:-translate-y-1">
                 <div className="h-48 overflow-hidden relative">
                   <img src={trip.img} alt={trip.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   <span className="absolute top-3 right-3 bg-forest-primary/90 text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full">{trip.country}</span>
@@ -102,9 +99,11 @@ const CongressEvent = () => {
         </div>
       </section>
 
-      {/* Devil's Throat Highlight */}
-      <section className="py-16 px-4 forest-gradient">
-        <div className="container mx-auto max-w-4xl">
+      <section className="py-16 px-4 forest-gradient relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-gold-warm blur-3xl" />
+        </div>
+        <div className="container mx-auto max-w-4xl relative z-10">
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="md:w-1/2">
               <img src={`${WRC_IMG}/congress-events/Iguazu%20National%20Park.jpg`} alt="Devil's Throat" className="rounded-2xl shadow-xl" />
@@ -117,11 +116,10 @@ const CongressEvent = () => {
         </div>
       </section>
 
-      {/* Countdown + CTA */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 section-leaf-pattern">
         <CountdownTimer />
         <div className="text-center mt-8">
-          <Link to={`/${language}/register`} className="px-8 py-4 bg-forest-primary text-primary-foreground font-bold rounded-full hover:bg-forest-deep transition-colors shadow-lg">
+          <Link to={`/${language}/register`} className="px-8 py-4 bg-forest-primary text-primary-foreground font-bold rounded-full hover:bg-forest-deep transition-colors shadow-forest">
             {t('common.registerNow')}
           </Link>
         </div>
