@@ -53,6 +53,19 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Navigate to="/en" replace />} />
+          {/* Bare path redirects for direct URL access */}
+          <Route path="/contact" element={<Navigate to="/en/contact" replace />} />
+          <Route path="/about" element={<Navigate to="/en/about" replace />} />
+          <Route path="/faq" element={<Navigate to="/en/faq" replace />} />
+          <Route path="/submit" element={<Navigate to="/en/submit" replace />} />
+          <Route path="/congress-theme" element={<Navigate to="/en/congress-theme" replace />} />
+          <Route path="/congress-event" element={<Navigate to="/en/congress-event" replace />} />
+          <Route path="/program" element={<Navigate to="/en/program" replace />} />
+          <Route path="/press" element={<Navigate to="/en/press" replace />} />
+          <Route path="/register" element={<Navigate to="/en/register" replace />} />
+          <Route path="/travel" element={<Navigate to="/en/travel" replace />} />
+          <Route path="/venue-accommodation" element={<Navigate to="/en/venue-accommodation" replace />} />
+          <Route path="/travel-faqs" element={<Navigate to="/en/travel-faqs" replace />} />
           <Route path="/:lang/*" element={<LanguageRoutes />} />
           <Route path="*" element={<Navigate to="/en" replace />} />
         </Routes>

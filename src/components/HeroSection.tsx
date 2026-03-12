@@ -58,7 +58,7 @@ const HeroSection = () => {
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${slide.image})` }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-forest-deep/70" />
 
           <div className="absolute inset-0 flex items-center z-10">
             <div className="container mx-auto max-w-7xl px-6 sm:px-10 lg:px-16 pt-16 sm:pt-0">
@@ -68,18 +68,10 @@ const HeroSection = () => {
                 }`}
                 style={{ transitionDelay: i === current ? '300ms' : '0ms' }}
               >
-                <h2
-                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-montserrat font-extrabold leading-tight mb-6"
-                  style={{
-                    background: 'linear-gradient(135deg, #ffffff, hsl(45, 85%, 65%))',
-                    WebkitBackgroundClip: 'text',
-                    backgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                  }}
-                >
+                <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-montserrat font-extrabold leading-tight mb-6 text-gold-warm">
                   {t(slide.titleKey)}
                 </h2>
-                <p className="text-lg sm:text-xl text-gold-warm font-semibold mb-3">
+                <p className="text-lg sm:text-xl text-gold-bright font-semibold mb-3">
                   {t(slide.subtitleKey)}
                 </p>
                 <p className="text-base sm:text-lg text-white/80 max-w-2xl mb-8 leading-relaxed">
@@ -131,13 +123,6 @@ const HeroSection = () => {
             aria-label={`Go to slide ${i + 1}`}
           />
         ))}
-      </div>
-
-      {/* Bottom wave - matches new background color */}
-      <div className="absolute bottom-0 left-0 right-0 z-10">
-        <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
-          <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z" fill="hsl(120, 20%, 93%)" />
-        </svg>
       </div>
     </section>
   );
