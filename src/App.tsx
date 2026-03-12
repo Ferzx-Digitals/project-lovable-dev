@@ -10,11 +10,14 @@ import About from "./pages/About";
 import FAQ from "./pages/FAQ";
 import Submit from "./pages/Submit";
 import CongressTheme from "./pages/CongressTheme";
+import CongressEvent from "./pages/CongressEvent";
 import Program from "./pages/Program";
 import Contact from "./pages/Contact";
 import Press from "./pages/Press";
 import Register from "./pages/Register";
 import Travel from "./pages/Travel";
+import VenueAccommodation from "./pages/VenueAccommodation";
+import TravelFAQs from "./pages/TravelFAQs";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +28,7 @@ const LanguageRoutes = () => (
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/about" element={<About />} />
+        <Route path="/congress-event" element={<CongressEvent />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/submit" element={<Submit />} />
         <Route path="/congress-theme" element={<CongressTheme />} />
@@ -33,6 +37,8 @@ const LanguageRoutes = () => (
         <Route path="/press" element={<Press />} />
         <Route path="/register" element={<Register />} />
         <Route path="/travel" element={<Travel />} />
+        <Route path="/venue-accommodation" element={<VenueAccommodation />} />
+        <Route path="/travel-faqs" element={<TravelFAQs />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </PageLayout>
